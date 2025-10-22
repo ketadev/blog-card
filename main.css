@@ -17,12 +17,43 @@
 
 :root {
     --background-color: hsl(47, 88%, 63%);
+    --card-color: hsl(0, 0%, 100%);
 }
 
 body {
     /* General styles here */
-    margin: auto;
+    height: 100%;
+    margin: 0;
+    font-family: 'Figtree', sans-serif;
     background-color: var(--background-color);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 384px;
+    height: 522px;
+    background-color: var(--card-color);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-image {
+    border-radius: 20px;
+    width: 336px;
+    height: 200px;
+    margin-top: 24px;
+    align-self: center;
 }
 
 .attribution {
