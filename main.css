@@ -1,42 +1,94 @@
 :root {
     --background-color: hsl(47, 88%, 63%);
     --card-color: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
     /* General styles here */
-    height: 100%;
-    margin: 0;
     font-family: 'Figtree', sans-serif;
     background-color: var(--background-color);
 }
 
 .container {
-    height: 100vh;
+    height: 95vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .card {
     width: 384px;
-    height: 522px;
     background-color: var(--card-color);
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 10px 10px black;
+    padding: 24px;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card-border {
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 10px 10px black;
+}
+
+.card > * + * {
+  margin-top: 12px;
 }
 
 .post-image {
-    border-radius: 20px;
-    width: 336px;
-    height: 200px;
+  border-radius: 20px;
+}
+
+.post-category {
     margin-top: 24px;
-    align-self: center;
+    font-size: .8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.post-category-badge {
+    background-color: var(--background-color);  
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.post-date {
+    font-size: .8rem;
+}
+
+.post-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.post-description {
+  color: var(--gray-500);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.post-author img {
+  width: 32px;
+  height: 32px;
+}
+
+.post-author-name {
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .attribution {
